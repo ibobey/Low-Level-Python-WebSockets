@@ -1,11 +1,11 @@
 import os
-
+from Server import *
 from dotenv import load_dotenv
 from os import getenv
 
 
-load_dotenv(".env")
+if __name__ == "__main__":
+    server = Server()
+    server.run_server()
+    server.receive()
 
-data = os.getenv("PORT", 55000)
-
-print(int(data))
